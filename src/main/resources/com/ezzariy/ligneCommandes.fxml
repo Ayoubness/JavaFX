@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="296.0" prefWidth="406.0"
+            xmlns="http://javafx.com/javafx/15.0.1" fx:controller="com.ezzariy.controller.LigneCommandController">
+    <Pane layoutX="9.0" layoutY="14.0" prefHeight="86.0" prefWidth="388.0">
+        <children>
+            <Text layoutX="12.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une ligne commande"
+                  textAlignment="CENTER" wrappingWidth="363.7294921875">
+                <font>
+                    <Font name="System Bold" size="27.0"/>
+                </font>
+            </Text>
+        </children>
+    </Pane>
+    <VBox layoutX="41.0" layoutY="125.0" prefHeight="77.0" prefWidth="84.0" spacing="15.0">
+        <Label prefHeight="24.0" prefWidth="81.0" text="Quantité">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label prefHeight="24.0" prefWidth="81.0" text="Produit">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </VBox>
+    <VBox layoutX="150.0" layoutY="125.0" prefHeight="77.0" prefWidth="215.0" spacing="10.0">
+        <children>
+            <TextField fx:id="qteCommand"/>
+            <ComboBox fx:id="productComboBox" prefHeight="26.0" prefWidth="224.0"/>
+        </children>
+    </VBox>
+    <HBox layoutX="26.0" layoutY="202.0" spacing="10.0"/>
+    <Button fx:id="addCommandButton" layoutX="173.0" layoutY="226.0" mnemonicParsing="false" onAction="#addCommand"
+            prefHeight="30.0" prefWidth="60.0" text="SAVE"/>
+</AnchorPane>

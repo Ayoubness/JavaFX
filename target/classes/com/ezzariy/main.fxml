@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="500.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/15.0.1"
+      fx:controller="com.ezzariy.controller.MainController">
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu>
+                    <graphic>
+                        <Label fx:id="productsLabel" text="Products"/>
+                    </graphic>
+                </Menu>
+                <Menu>
+                    <graphic>
+                        <Label fx:id="clientsLabel" text="Clients"/>
+                    </graphic>
+                </Menu>
+                <Menu>
+                    <graphic>
+                        <Label fx:id="ventesLabel" text="Vents"/>
+                    </graphic>
+                </Menu>
+                <Menu>
+                    <graphic>
+                        <Label fx:id="exitAppLabel" text="Exit"/>
+                    </graphic>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <StackPane fx:id="vistaHolder" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS"/>
+    </children>
+</VBox>

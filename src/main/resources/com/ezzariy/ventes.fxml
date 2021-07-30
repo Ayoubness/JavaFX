@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" xmlns="http://javafx.com/javafx/15.0.1"
+           fx:controller="com.ezzariy.controller.VenteController">
+    <children>
+        <AnchorPane prefHeight="415.0" prefWidth="1084.0">
+            <Pane layoutX="346.0" layoutY="14.0" prefHeight="43.0" prefWidth="429.0">
+                <children>
+                    <Text layoutX="8.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des ventes"
+                          textAlignment="CENTER" wrappingWidth="412.7294921875">
+                        <font>
+                            <Font name="System Bold" size="27.0"/>
+                        </font>
+                    </Text>
+                </children>
+            </Pane>
+            <VBox layoutX="14.0" layoutY="74.0" prefHeight="232.0" prefWidth="84.0" spacing="15.0">
+                <Label prefHeight="24.0" prefWidth="86.0" text="Date">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label prefHeight="24.0" prefWidth="86.0" text="Client">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label prefHeight="57.0" prefWidth="84.0" text="Ligne Commande" wrapText="true">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </VBox>
+            <VBox layoutX="110.0" layoutY="74.0" prefHeight="272.0" prefWidth="296.0" spacing="10.0">
+                <children>
+                    <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="295.0"/>
+                    <ComboBox fx:id="clientComboBox" prefHeight="26.0" prefWidth="297.0"/>
+                    <ListView fx:id="ligneCommandeListView" prefHeight="156.0" prefWidth="215.0"/>
+                    <Button fx:id="plusCommandButton" mnemonicParsing="false" onAction="#plusCommand" prefHeight="26.0"
+                            prefWidth="303.0" text="+"/>
+                </children>
+            </VBox>
+            <HBox layoutX="26.0" layoutY="202.0" spacing="10.0"/>
+            <TableView fx:id="TableView" layoutX="416.0" layoutY="74.0" prefHeight="334.0" prefWidth="660.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID"/>
+                    <TableColumn fx:id="dateColumn" prefWidth="105.0" text="Date"/>
+                    <TableColumn fx:id="clientColumn" minWidth="0.0" prefWidth="206.0" text="Client"/>
+                    <TableColumn fx:id="totalColumn" prefWidth="93.0" text="Total"/>
+                    <TableColumn fx:id="supprimerColumn" minWidth="0.0" prefWidth="111.0" text="Supprimer"/>
+                    <TableColumn fx:id="editColumn" prefWidth="109.0" text="Modifier"/>
+                </columns>
+            </TableView>
+            <Button fx:id="insertButton" layoutX="228.0" layoutY="356.0" mnemonicParsing="false"
+                    onAction="#insertButton" prefHeight="30.0" prefWidth="60.0" text="Save"/>
+        </AnchorPane>
+    </children>
+</StackPane>

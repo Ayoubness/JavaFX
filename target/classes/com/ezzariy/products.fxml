@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" xmlns="http://javafx.com/javafx/15.0.1"
+           fx:controller="com.ezzariy.controller.ProductController">
+    <children>
+        <AnchorPane prefHeight="415.0" prefWidth="1084.0">
+            <Pane layoutX="328.0" layoutY="20.0" prefHeight="43.0" prefWidth="429.0">
+                <children>
+                    <Text layoutX="8.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                          text="Gestion des produits" textAlignment="CENTER" wrappingWidth="412.7294921875">
+                        <font>
+                            <Font name="System Bold" size="27.0"/>
+                        </font>
+                    </Text>
+                </children>
+            </Pane>
+            <VBox layoutX="32.0" layoutY="126.0" prefHeight="132.0" prefWidth="84.0" spacing="15.0">
+                <Label text="Designation">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label text="Prix">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label text="Qte">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+                <Label text="Date">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </Label>
+            </VBox>
+            <VBox layoutX="125.0" layoutY="126.0" prefHeight="153.0" prefWidth="215.0" spacing="10.0">
+                <children>
+                    <TextField fx:id="designationField"/>
+                    <TextField fx:id="qteField"/>
+                    <TextField fx:id="prixField"/>
+                    <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="220.0"/>
+                </children>
+            </VBox>
+            <HBox layoutX="26.0" layoutY="202.0" spacing="10.0"/>
+            <TableView fx:id="TableView" layoutX="346.0" layoutY="74.0" prefHeight="316.0" prefWidth="724.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID"/>
+                    <TableColumn fx:id="designationColumn" prefWidth="259.0" text="Designation"/>
+                    <TableColumn fx:id="prixColumn" prefWidth="123.0" text="Prix"/>
+                    <TableColumn fx:id="qteColumn" prefWidth="113.0" text="Qte"/>
+                    <TableColumn fx:id="dateColumn" prefWidth="193.0" text="Date"/>
+                </columns>
+            </TableView>
+            <Button fx:id="insertButton" layoutX="197.0" layoutY="300.0" mnemonicParsing="false"
+                    onAction="#insertButton" prefHeight="30.0" prefWidth="60.0" text="Insert"/>
+        </AnchorPane>
+    </children>
+</StackPane>
